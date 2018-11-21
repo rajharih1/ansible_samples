@@ -1,0 +1,9 @@
+--- # Playbook with vars and vars_files
+- hosts: webservers
+  connection: ssh
+  gather_facts: no
+  vars:
+    playbook_version: 0.1a
+  vars_files:
+    - conf/copyright.yml
+    - conf/webdefaults.yml

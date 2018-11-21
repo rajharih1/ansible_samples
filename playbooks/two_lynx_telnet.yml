@@ -1,0 +1,8 @@
+- hosts: webservers
+  connection: ssh
+  gather_facts: no
+  tasks:
+   - name: Install lynx
+     yum: pkg=lynx state=installed update_cache=true
+   - name: Check for telnet install
+     yum: pkg=telnet state=present update_cache=true

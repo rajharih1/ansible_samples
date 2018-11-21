@@ -1,0 +1,5 @@
+- hosts: webservers
+  tasks:
+   - name: Install Lynx browser on Web Server
+     yum: pkg=lynx state=installed update_cache=true
+
